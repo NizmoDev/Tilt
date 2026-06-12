@@ -1,27 +1,27 @@
 # Python Tilt Cluster (Kubernetes + Docker + Tilt)
 
-Ce projet permet de développer une application JavaScript (Node.js) directement dans un cluster Kubernetes grâce à DevSpace.
+This project allows you to develop a JavaScript (Node.js) application directly in a Kubernetes cluster with DevSpace.
 
-Ce projet permet de développer une application Python localement tout en la déployant automatiquement dans un cluster Kubernetes grâce à Tilt.
+This project allows you to develop a Python application locally while automatically deploying it to a Kubernetes cluster with Tilt.
 
 ---
 
-## 🚀 Prérequis
+## 🚀 Prerequisites
 
-Avant de commencer, assure-toi d’avoir installé :
+Before you start, make sure you have installed:
 
 - Docker
-- Kubernetes (kubectl configuré)
+- Kubernetes (`kubectl` configured)
 - Tilt
 - Python 3.8+
-- kind (optionnel mais recommandé)
-- Un cluster Kubernetes fonctionnel
+- kind (optional but recommended)
+- A working Kubernetes cluster
   
 ---
 
 ## 📦 Installation
 
-### 1. Cloner le projet
+### 1. Clone the project
 
 ```bash
 git clone https://github.com/NizmoDev/Tilt.git
@@ -33,7 +33,7 @@ cd Tilt
 
 ---
 
-### 2. Créer le cluster Kubernetes
+### 2. Create the Kubernetes cluster
 
 ```bash
 kind create cluster --name tilt-demo
@@ -41,7 +41,7 @@ kind create cluster --name tilt-demo
 
 ---
 
-### 3. Vérifier le cluster
+### 3. Check the cluster
 
 ```bash
 kubectl cluster-info
@@ -53,7 +53,7 @@ kubectl get nodes
 
 ---
 
-### 4. 📦 Installer Tilt
+### 4. 📦 Install Tilt
 
 ```bash
 iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/tilt-dev/tilt/master/scripts/install.ps1'))
@@ -61,9 +61,9 @@ iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.co
 
 ---
 
-## ⚙️ Lancer le projet avec Tilt
+## ⚙️ Run the project with Tilt
 
-### 1. Démarrer Tilt
+### 1. Start Tilt
 
 ```bash
 tilt up
@@ -71,9 +71,9 @@ tilt up
 
 ---
 
-## 🌐 Accès à l’application
+## 🌐 Access the application
 
-Ouvrir dans le navigateur :
+Open in the browser:
 
 ```text
 http://localhost:10350/
@@ -81,7 +81,7 @@ http://localhost:10350/
 
 ---
 
-## 🔄 Workflow de développement
+## 🔄 Development workflow
 
 Tilt handles the full CI/CD loop locally:
 
@@ -92,7 +92,7 @@ Redeploy Kubernetes manifests
 
 ---
 
-## 🛑 Arrêter Tilt
+## 🛑 Stop Tilt
 
 ```bash
 tilt down
@@ -100,7 +100,7 @@ tilt down
 
 ---
 
-## 🧪 Commandes utiles
+## 🧪 Useful commands
 
 ```bash
 kubectl get pods
